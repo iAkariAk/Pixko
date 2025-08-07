@@ -2,7 +2,6 @@
 @file:Suppress("unused")
 
 import com.vanniktech.maven.publish.KotlinMultiplatform
-import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.targets.js.testing.mocha.KotlinMocha
 
@@ -156,7 +155,7 @@ mavenPublishing {
             sourcesJar = true,
         )
     )
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    publishToMavenCentral(true)
     signAllPublications()
     coordinates(group.toString(), rootProject.name, version.toString())
     pom {
